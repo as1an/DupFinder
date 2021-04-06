@@ -7,18 +7,18 @@ The application lists all files in a directory and in all sub-directories, exclu
 files by their sizes and hash-values (SHA-1 by default). Resulting list of duplicated files gets logged in 
 `logs/dupfinder.log`.
 
-###Dependencies
+### Dependencies
 Does not depend on specific libraries or platform. Java 1.8 or higher. In case of "Too many open files" error,
 may require to increase ulimit values.
 
-###Build
+### uild
 mvn package
 
-###Usage
+### Usage
 `java -jar dupfinder.jar /tmp`
 
 Define other hashing algorithm registered in JRE:
 `java -jar -DhashAlg=SHA-256 dupfinder.jar /tmp`
 
-###Suggestions
+### Suggestions
 We might exclude some files, such as, .DS_Store, desktop.ini, symbolic links, etc.
